@@ -1,0 +1,32 @@
+/**
+ * We are going to learn how to use mongodb shell
+ * 
+ * 1. how to show the list of databases
+ * 2. how to create and switch database
+ * 3. how to create a collections
+ * 4. how to list the collections
+ * 5. how to delete collection
+ * 6. how to delete database
+ * 
+ */
+
+// how to show the list of databases 
+show dbs;
+
+//how to create and switch database
+use somedatabasename;
+
+//how to create a collections
+db.createCollection('collection_name');
+
+//how to list the collections
+db.getCollectionNames();
+
+//how to delete collection
+db.collection_name.drop();
+
+// how to delete database
+db.dropDatabase();
+
+
+ 
