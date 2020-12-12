@@ -1,0 +1,37 @@
+/**
+ * We are going to learn how to use mongodb shell
+ * 
+ * 1. how to insert the single data into collection  
+ * 2. how to insert the multiple data into collection
+ * 
+ */
+
+// how to insert the single data into collection
+
+let student_2 = {
+    name: "student2",
+    age: 22,
+    hobbies: ['playing', 'gaming','singing'],
+    rank: 1
+}
+
+db.student.insertOne(student_2);
+
+// how to insert the multiple data into collection
+
+let multipleData = [
+    {
+        name: "student3",
+        age: 23,
+        hobbies: ['gaming','singing'],
+        rank: 4
+    },
+    {
+        name: "student4",
+        age: 22,
+        hobbies: ['playing','singing'],
+        rank: 2
+    }
+];
+
+db.student.insertMany(multipleData);
