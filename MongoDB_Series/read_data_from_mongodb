@@ -1,0 +1,43 @@
+/**
+ *  DB - testdatabase, collection - student
+ * 
+ * We are going to learn how to select/read documents from database
+ * 
+ * 1. How to get the list of all documents
+ * 2. how to get the document based on conditions
+ * 3. How to get the projected data from collection
+ * 
+ */
+
+// How to get the list of all documents
+
+db.student.find().pretty();
+
+// how to get the document based on conditions
+
+db.student.find({name: "some_name"}).pretty();
+
+db.student.find({name: "some_name", rank: 1}).pretty();
+
+// equals
+db.student.find({ age: {$eq: 23}}).pretty();
+
+// not equals
+db.student.find({ age: {$ne: 23}}).pretty();
+
+// less than
+db.student.find({age: {$lt: 23}}).pretty();
+
+// greater than
+db.student.find({age: {$gt: 23}}).pretty();
+
+// less than or equal to
+db.student.find({age: {$lte: 23}}).pretty();
+
+// greater than or equal to
+db.student.find({age: {$gte: 23}}).pretty();
+
+// How to get the projected data from collection
+
+db.student.find({}, {_id: 0, name: 1, age: 1}).pretty();
+
